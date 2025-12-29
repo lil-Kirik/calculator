@@ -10,6 +10,9 @@ btns.forEach((btn) => {
     btn.addEventListener("click", () => {
         currentDisplay += btn.textContent;
         display.textContent = currentDisplay;
+        if (operator != '') {
+            display.textContent = `${firstNumber}${operator}${currentDisplay}`
+        }
     })
 })
 
@@ -20,7 +23,7 @@ op.forEach(oper => {
         firstNumber = currentDisplay;
         operator = oper.textContent;
         currentDisplay = "";
-        display.textContent = operator;
+        display.textContent = `${firstNumber}${operator}`;
         console.log(firstNumber)
         console.log(oper.textContent)
         
@@ -49,15 +52,16 @@ equals.addEventListener('click', () => {
         default:
             break;
     }
-    display.textContent = currentDisplay;
+    display.textContent = `${firstNumber}${operator}${secondNumber}=${currentDisplay}`;
     console.log(currentDisplay)
-
+    firstNumber = ''
+    operator = ''
+    currentDisplay = ''
 })
 
 const clear = document.querySelector('.clear')
 
 clear.addEventListener('click', () => {
     currentDisplay = ''
-    display.textContent = 'стёрто'
-    console.log('стёрто')
+    display.textContent = ''
 })
