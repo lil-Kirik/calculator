@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  background-color: dimgrey;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+button, input {
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+    
+}
+.display{
+  font-size: 50px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 400px;
+  text-align: center;
+  background-color: grey;
+}
+.numbers{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px
+}
+
+.btn{
+  font-size: 50px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 30%;
+  cursor: pointer;
+  background-color: grey;
+    
+}
+
+.operator{
+  font-size: 50px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 30%;
+  cursor: pointer;
+  background-color: greenyellow;
+}
+
+.clear{
+  font-size: 50px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 30%;
+  cursor: pointer;
+  background-color: yellow;
+}
+.equals{
+  font-size: 50px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 30%;
+  cursor: pointer;
+  background-color: red;
+}
